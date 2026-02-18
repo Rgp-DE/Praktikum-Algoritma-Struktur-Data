@@ -12,7 +12,7 @@ public class MahasiswaMain {
         mahasiswa1.tampilkanInfo();
 
         Mahasiswa21 mahasiswa2 = new Mahasiswa21("Siti Nur Aisyah", "2541070646", 3.6, "SIB 1B");
-        mahasiswa1.updateIPK(3.9);
+        mahasiswa2.updateIPK(3.9);
         mahasiswa2.tampilkanInfo();
 
     }
