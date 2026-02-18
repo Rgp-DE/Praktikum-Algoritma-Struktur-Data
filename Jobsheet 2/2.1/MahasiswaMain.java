@@ -15,6 +15,8 @@ public class MahasiswaMain {
         mahasiswa2.updateIPK(3.9);
         mahasiswa2.tampilkanInfo();
 
+        Mahasiswa21 mhsFarhan = new Mahasiswa21("Muhammad Ali Farhan", "2541070645", 3.8, "SIB 1A");
+
     }
-    
+
 }
