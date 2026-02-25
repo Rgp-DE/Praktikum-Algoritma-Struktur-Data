@@ -26,5 +26,6 @@ public class MahasiswaDemo21 {
             System.out.println("Data mahasiswa ke-" + (i + 1));
             arrayOfMahasiswa[i].cetakInfo();
         }
+        sc.close();
     }
 }
