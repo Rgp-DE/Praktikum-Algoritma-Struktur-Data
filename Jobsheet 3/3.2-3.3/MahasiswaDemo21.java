@@ -17,7 +17,8 @@ public class MahasiswaDemo21 {
             System.out.print("Kelas: ");
             arrayOfMahasiswa[i].kelas = sc.nextLine();
             System.out.print("IPK: ");
-            arrayOfMahasiswa[i].ipk = sc.nextFloat();
+            dummy = sc.nextLine(); 
+            arrayOfMahasiswa[i].ipk = Float.parseFloat(dummy);
             System.out.println("------------------------------");
         }
 
