@@ -22,15 +22,23 @@ public class DosenDemo21 {
             arrayOfDosen[i].usia = Integer.parseInt(dummy);
         }
 
-        int no = 1;
-        for (Dosen21 dosen : arrayOfDosen) {
-            System.out.println("\nData dosen ke-" + no++);
-            System.out.println("Kode: " + dosen.kode);
-            System.out.println("Nama: " + dosen.nama);
-            System.out.println("Jenis Kelamin: " + (dosen.jenisKelamin ? "Laki-laki" : "Perempuan"));
-            System.out.println("Usia: " + dosen.usia);
+        DataDosen21 dataDosen = new DataDosen21();
+        
+        System.out.println("\n==============================");
+        dataDosen.dataSemuaDosen(arrayOfDosen);
 
-        }
+        System.out.println("\n==============================");
+        dataDosen.jumlahDosenperJenisKelamin(arrayOfDosen);
+
+        System.out.println("\n==============================");
+        dataDosen.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+
+        System.out.println("\n==============================");
+        dataDosen.infoDosenPalingTua(arrayOfDosen);
+
+        System.out.println("\n==============================");
+        dataDosen.infoDosenPalingMuda(arrayOfDosen);
+
         sc.close();
     }
 
