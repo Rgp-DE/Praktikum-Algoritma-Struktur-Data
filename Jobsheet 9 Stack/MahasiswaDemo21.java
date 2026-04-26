@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class MahasiswaDemo21 {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
 
         StackTugasMahasiswa21 stack = new StackTugasMahasiswa21(5);
 
@@ -17,7 +17,7 @@ public class MahasiswaDemo21 {
             System.out.print("Pilih: ");
 
             pilih = scan.nextInt();
-            scan.nextLine(); // buang enter
+            scan.nextLine();
 
             switch (pilih) {
 
@@ -31,7 +31,7 @@ public class MahasiswaDemo21 {
                     System.out.print("Kelas: ");
                     String kelas = scan.nextLine();
 
-                    Mahasiswa21 mhs = new Mahasiswa21(nama, nim, kelas);
+                    Mahasiswa21 mhs = new Mahasiswa21(nim, nama, kelas);
                     stack.push(mhs);
 
                     System.out.printf("Tugas %s berhasil dikumpulkan\n", mhs.nama);
@@ -50,8 +50,6 @@ public class MahasiswaDemo21 {
                         dinilai.tugasDinilai(nilai);
 
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
-                    } else {
-                        System.out.println("Tidak ada tugas untuk dinilai!");
                     }
                     break;
 
@@ -60,13 +58,11 @@ public class MahasiswaDemo21 {
 
                     if (lihat != null) {
                         System.out.println("Tugas terakhir dikumpulkan oleh " + lihat.nama);
-                    } else {
-                        System.out.println("Stack kosong!");
                     }
                     break;
 
                 case 4:
-                    System.out.println("Daftar semua tugas:");
+                    System.out.println("Daftar semua tugas");
                     System.out.println("Nama\tNIM\tKelas");
                     stack.print();
                     break;
@@ -80,5 +76,3 @@ public class MahasiswaDemo21 {
         scan.close();
     }
 }
-    
-
