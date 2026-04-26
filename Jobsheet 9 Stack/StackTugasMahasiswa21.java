@@ -46,6 +46,16 @@ public class StackTugasMahasiswa21 {
         }
     }
 
+    //  FITUR BARU: LIHAT TUGAS TERBAWAH
+    public Mahasiswa21 peekBottom() {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            System.out.println("Stack kosong! Tidak ada tugas.");
+            return null;
+        }
+    }
+
     public void print() {
         if (isEmpty()) {
             System.out.println("Stack kosong!");
