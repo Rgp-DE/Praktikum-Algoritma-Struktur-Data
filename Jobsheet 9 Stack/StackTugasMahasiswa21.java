@@ -56,6 +56,11 @@ public class StackTugasMahasiswa21 {
         }
     }
 
+     // HITUNG JUMLAH DATA
+    public int getJumlah() {
+        return top + 1;
+    }
+
     public void print() {
         if (isEmpty()) {
             System.out.println("Stack kosong!");

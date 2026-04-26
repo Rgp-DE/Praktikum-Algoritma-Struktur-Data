@@ -14,7 +14,8 @@ public class MahasiswaDemo21 {
             System.out.println("2. Menilai Tugas");
             System.out.println("3. Melihat Tugas Teratas");
             System.out.println("4. Melihat Daftar Tugas");
-            System.out.println("5. Melihat Tugas Terbawah"); // MENU BARU
+            System.out.println("5. Melihat Tugas Terbawah");
+            System.out.println("6. Jumlah Tugas Saat Ini"); // FITUR BARU
             System.out.print("Pilih: ");
 
             pilih = scan.nextInt();
@@ -76,11 +77,16 @@ public class MahasiswaDemo21 {
                     }
                     break;
 
+                case 6:
+                    int jumlah = stack.getJumlah();
+                    System.out.println("Jumlah tugas saat ini: " + jumlah);
+                    break;
+
                 default:
                     System.out.println("Pilihan tidak valid!");
             }
 
-        } while (pilih >= 1 && pilih <= 5); // DIUPDATE
+        } while (pilih >= 1 && pilih <= 6); // UPDATE
 
         scan.close();
     }
