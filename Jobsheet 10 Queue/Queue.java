@@ -60,44 +60,46 @@ public class Queue {
         }
     }
 
-    public void enqueue(int dt) {
-        if (isFull()) {
-            System.out.println("Queue sudah penuh");
+   public void enqueue(int dt) {
+    if (isFull()) {
+        System.out.println("Queue Overflow! Program dihentikan.");
+        System.exit(0);
         } else {
             if (isEmpty()) {
-                front = rear = 0;
+            front = rear = 0;
+        } else {
+            if (rear == max - 1) {
+                rear = 0;
             } else {
-                if (rear == max - 1) {
-                    rear = 0;
-                } else {
-                    rear++;
-                }
-               
+                rear++;
             }
-             data[rear] = dt;
-            size++;
+        }
+        data[rear] = dt;
+        size++;
         }
     }
 
-    public int dequeue() {
-        int dt = 0;
-        if (isEmpty()) {
-            System.out.println("Queue masih kosong");
-        } else {
-            dt = data[front];
-            size--;
-            if (isEmpty()) {
-                front = rear = -1;
-            } else {
-                if (front == max - 1) {
-                    front = 0;
-                } else {
-                    front++;
-                }
-            }
-        }
-        return dt;
+public int dequeue() {
+    if (isEmpty()) {
+        System.out.println("Queue Underflow! Program dihentikan.");
+        System.exit(0);
     }
+
+    int dt = data[front];
+    size--;
+
+    if (isEmpty()) {
+        front = rear = -1;
+    } else {
+        if (front == max - 1) {
+            front = 0;
+        } else {
+            front++;
+        }
+    }
+
+    return dt;
+}
         
         
 }

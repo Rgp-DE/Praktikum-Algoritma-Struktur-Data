@@ -39,15 +39,15 @@ public class PeminjamanMain21 {
         Scanner sc = new Scanner(System.in);
 
         Mahasiswa21CM[] mhs = new Mahasiswa21CM[3];
-        mhs[0] = new Mahasiswa21CM("22001", "Andi", "Teknik Informatika");
-        mhs[1] = new Mahasiswa21CM("22002", "Budi", "Teknik Informatika");
-        mhs[2] = new Mahasiswa21CM("22003", "Citra", "Sistem Informasi Bisnis");
+        mhs[0] = new Mahasiswa21CM("22001", "Andi", "Teknik Informatika", "08123");
+        mhs[1] = new Mahasiswa21CM("22002", "Budi", "Teknik Informatika", "08124");
+        mhs[2] = new Mahasiswa21CM("22003", "Citra", "Sistem Informasi Bisnis", "08125");
 
         Buku21[] buku = new Buku21[4];
-        buku[0] = new Buku21("B001", "Algoritma", 2020);
-        buku[1] = new Buku21("B002", "Basis Data", 2019);
-        buku[2] = new Buku21("B003", "Pemrograman", 2021);
-        buku[3] = new Buku21("B004", "Fisika", 2024);
+        buku[0] = new Buku21("B001", "Algoritma", 2020, "yasha");
+        buku[1] = new Buku21("B002", "Basis Data", 2019, "yasha");
+        buku[2] = new Buku21("B003", "Pemrograman", 2021, "Gramedia");
+        buku[3] = new Buku21("B004", "Fisika", 2024, "RichPeople");
 
         Peminjaman21[] pinjam = new Peminjaman21[5];
         pinjam[0] = new Peminjaman21(mhs[0], buku[0], 7);
@@ -99,11 +99,25 @@ public class PeminjamanMain21 {
 
                 case 4:
                     insertionSort(pinjam);
+                    int jumlah = 0;
                     System.out.println("=== DATA SETELAH SORTING (DENDA TERBESAR) ===");
                     for (int i = 0; i < pinjam.length; i++) {
-                        pinjam[i].tampilPeminjaman();
+                        
+                        if (pinjam[i].denda > 0) {
+                            pinjam[i].tampilPeminjaman();
+                            jumlah++; 
+                        }
+
                     }
-                    break;
+
+                        if (jumlah == 0) {
+                            System.out.println("Tidak ada data peminjaman yang kena denda");
+                        } else {
+                            System.out.println("Jumlah peminjaman kena denda: " + jumlah);
+                        }
+
+                        break;
+
 
                 case 5:
                     System.out.print("Masukkan NIM: ");
