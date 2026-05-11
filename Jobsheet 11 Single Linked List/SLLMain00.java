@@ -1,37 +1,31 @@
+import java.util.Scanner;
+
 public class SLLMain00 {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
         SingleLinkedList00 sll = new SingleLinkedList00();
-        
-        Mahasiswa00 mhs1 =
-                new Mahasiswa00("Dirga",
-                        "21212203",
-                        "4D",
-                        3.6);
 
-        Mahasiswa00 mhs2 =
-                new Mahasiswa00("Alvaro",
-                        "24212200",
-                        "1A",
-                        4.0);
+        System.out.print("Masukkan NIM  : ");
+        String nim = sc.nextLine();
 
-        Mahasiswa00 mhs3 =
-                new Mahasiswa00("Cintia",
-                        "22212202",
-                        "3C",
-                        3.5);
+        System.out.print("Masukkan Nama : ");
+        String nama = sc.nextLine();
 
-        Mahasiswa00 mhs4 =
-                new Mahasiswa00("Bimon",
-                        "23212201",
-                        "2B",
-                        3.8);
+        System.out.print("Masukkan Prodi: ");
+        String prodi = sc.nextLine();
+
+        System.out.print("Masukkan IPK  : ");
+        double ipk = sc.nextDouble();
+
+        Mahasiswa00 mhs =
+                new Mahasiswa00(nim, nama, prodi, ipk);
+
+        sll.addFirst(mhs);
 
         sll.print();
-        sll.addFirst(mhs4);
-        sll.print();
-        sll.addLast(mhs1);
-        sll.print();
-        sll.insertAfter("Dirga", mhs3);
-        sll.print();
+
+        sc.close();
     }
 }
