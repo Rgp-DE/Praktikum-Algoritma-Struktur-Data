@@ -7,23 +7,34 @@ public class SLLMain00 {
 
         SingleLinkedList00 sll = new SingleLinkedList00();
 
-        System.out.print("Masukkan NIM  : ");
-        String nim = sc.nextLine();
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlah = sc.nextInt();
+        sc.nextLine();
 
-        System.out.print("Masukkan Nama : ");
-        String nama = sc.nextLine();
+        for (int i = 0; i < jumlah; i++) {
 
-        System.out.print("Masukkan Prodi: ");
-        String prodi = sc.nextLine();
+            System.out.println("\nData Mahasiswa ke-" + (i + 1));
 
-        System.out.print("Masukkan IPK  : ");
-        double ipk = sc.nextDouble();
+            System.out.print("NIM   : ");
+            String nim = sc.nextLine();
 
-        Mahasiswa00 mhs =
-                new Mahasiswa00(nim, nama, prodi, ipk);
+            System.out.print("Nama  : ");
+            String nama = sc.nextLine();
 
-        sll.addFirst(mhs);
+            System.out.print("Prodi : ");
+            String prodi = sc.nextLine();
 
+            System.out.print("IPK   : ");
+            double ipk = sc.nextDouble();
+            sc.nextLine();
+
+            Mahasiswa00 mhs =
+                    new Mahasiswa00(nim, nama, prodi, ipk);
+
+            sll.addLast(mhs);
+        }
+
+        System.out.println("\nIsi Linked List:");
         sll.print();
 
         sc.close();
