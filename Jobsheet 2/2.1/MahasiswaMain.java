@@ -1,6 +1,6 @@
 public class MahasiswaMain {
     public static void main(String[] args) {
-        Mahasiswa21 mahasiswa1 = new Mahasiswa21();
+        Mahasiswa21DLL mahasiswa1 = new Mahasiswa21DLL();
         mahasiswa1.nama = "Muhammad Ali Farhan";
         mahasiswa1.nim = "2541070645";
         mahasiswa1.kelas = "SIB 1B";
@@ -11,11 +11,11 @@ public class MahasiswaMain {
         mahasiswa1.updateIPK(3.8);
         mahasiswa1.tampilkanInfo();
 
-        Mahasiswa21 mahasiswa2 = new Mahasiswa21("Siti Nur Aisyah", "2541070646", 3.6, "SIB 1B");
+        Mahasiswa21DLL mahasiswa2 = new Mahasiswa21DLL("Siti Nur Aisyah", "2541070646", 3.6, "SIB 1B");
         mahasiswa2.updateIPK(3.9);
         mahasiswa2.tampilkanInfo();
 
-        Mahasiswa21 mhsFarhan = new Mahasiswa21("Muhammad Ali Farhan", "2541070645", 3.8, "SIB 1A");
+        Mahasiswa21DLL mhsFarhan = new Mahasiswa21DLL("Muhammad Ali Farhan", "2541070645", 3.8, "SIB 1A");
 
     }
 

@@ -1,10 +1,10 @@
 public class MahasiswaBerprestasi21 {
     
-    Mahasiswa21[] listMhs;;
+    Mahasiswa21DLL[] listMhs;;
     int idx;
 
     MahasiswaBerprestasi21(int kapasitas){
-        listMhs = new Mahasiswa21[kapasitas];
+        listMhs = new Mahasiswa21DLL[kapasitas];
     }
 
     int sequentialSearching(double cari){
@@ -39,7 +39,7 @@ public class MahasiswaBerprestasi21 {
     for (int i = 0; i < idx - 1; i++){
         for (int j = 1; j < idx - i; j++){
             if (listMhs[j-1].ipk > listMhs[j].ipk){
-                Mahasiswa21 tmp = listMhs[j];
+                Mahasiswa21DLL tmp = listMhs[j];
                 listMhs[j] = listMhs[j-1];
                 listMhs[j-1] = tmp;
             }
@@ -47,7 +47,7 @@ public class MahasiswaBerprestasi21 {
     }
 }
 
-    void tambah(Mahasiswa21 m){
+    void tambah(Mahasiswa21DLL m){
         if (idx < listMhs.length){
             listMhs[idx] = m;
             idx++;

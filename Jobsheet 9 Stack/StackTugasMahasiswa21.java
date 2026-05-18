@@ -1,11 +1,11 @@
 public class StackTugasMahasiswa21 {
-    Mahasiswa21[] stack;
+    Mahasiswa21DLL[] stack;
     int top;
     int size;
 
     public StackTugasMahasiswa21(int size) {
         this.size = size;
-        stack = new Mahasiswa21[size];
+        stack = new Mahasiswa21DLL[size];
         top = -1;
     }
 
@@ -17,7 +17,7 @@ public class StackTugasMahasiswa21 {
         return top == -1;
     }
 
-    public void push(Mahasiswa21 mhs) {
+    public void push(Mahasiswa21DLL mhs) {
         if (!isFull()) {
             top++;
             stack[top] = mhs;
@@ -26,9 +26,9 @@ public class StackTugasMahasiswa21 {
         }
     }
 
-    public Mahasiswa21 pop() {
+    public Mahasiswa21DLL pop() {
         if (!isEmpty()) {
-            Mahasiswa21 m = stack[top];
+            Mahasiswa21DLL m = stack[top];
             top--;
             return m;
         } else {
@@ -37,7 +37,7 @@ public class StackTugasMahasiswa21 {
         }
     }
 
-    public Mahasiswa21 peek() {
+    public Mahasiswa21DLL peek() {
         if (!isEmpty()) {
             return stack[top];
         } else {
@@ -47,7 +47,7 @@ public class StackTugasMahasiswa21 {
     }
 
     //  FITUR BARU: LIHAT TUGAS TERBAWAH
-    public Mahasiswa21 peekBottom() {
+    public Mahasiswa21DLL peekBottom() {
         if (!isEmpty()) {
             return stack[0];
         } else {

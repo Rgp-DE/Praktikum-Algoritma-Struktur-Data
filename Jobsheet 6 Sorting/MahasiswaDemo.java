@@ -25,7 +25,7 @@ public class MahasiswaDemo {
             double ipk = sc.nextDouble();
             sc.nextLine();
 
-            Mahasiswa21 m = new Mahasiswa21(nim, nama, kelas, ipk);
+            Mahasiswa21DLL m = new Mahasiswa21DLL(nim, nama, kelas, ipk);
             list.tambah(m);
 
             System.out.println();

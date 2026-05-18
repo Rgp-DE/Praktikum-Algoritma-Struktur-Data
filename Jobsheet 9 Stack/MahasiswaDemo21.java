@@ -33,14 +33,14 @@ public class MahasiswaDemo21 {
                     System.out.print("Kelas: ");
                     String kelas = scan.nextLine();
 
-                    Mahasiswa21 mhs = new Mahasiswa21(nim, nama, kelas);
+                    Mahasiswa21DLL mhs = new Mahasiswa21DLL(nim, nama, kelas);
                     stack.push(mhs);
 
                     System.out.printf("Tugas %s berhasil dikumpulkan\n", mhs.nama);
                     break;
 
                 case 2:
-                    Mahasiswa21 dinilai = stack.pop();
+                    Mahasiswa21DLL dinilai = stack.pop();
 
                     if (dinilai != null) {
                         System.out.println("Menilai tugas dari " + dinilai.nama);
@@ -58,7 +58,7 @@ public class MahasiswaDemo21 {
                     break;
 
                 case 3:
-                    Mahasiswa21 atas = stack.peek();
+                    Mahasiswa21DLL atas = stack.peek();
 
                     if (atas != null) {
                         System.out.println("Tugas terakhir dikumpulkan oleh " + atas.nama);
@@ -72,7 +72,7 @@ public class MahasiswaDemo21 {
                     break;
 
                 case 5:
-                    Mahasiswa21 bawah = stack.peekBottom();
+                    Mahasiswa21DLL bawah = stack.peekBottom();
 
                     if (bawah != null) {
                         System.out.println("Tugas pertama dikumpulkan oleh " + bawah.nama);

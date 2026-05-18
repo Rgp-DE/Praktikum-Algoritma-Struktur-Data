@@ -1,13 +1,13 @@
 public class MahasiswaBerprestasi {
     
-    Mahasiswa21[] listMhs;
+    Mahasiswa21DLL[] listMhs;
 
     MahasiswaBerprestasi(int kapasitas){
-    listMhs = new Mahasiswa21[kapasitas];
+    listMhs = new Mahasiswa21DLL[kapasitas];
     }
     int idx;
         
-    void tambah (Mahasiswa21 m){
+    void tambah (Mahasiswa21DLL m){
         if (idx<listMhs.length){
             listMhs[idx]=m;
             idx++;
@@ -20,7 +20,7 @@ public class MahasiswaBerprestasi {
         for (int i=0; i<listMhs.length-1; i++){
             for (int j=1; j<listMhs.length-i; j++){
                 if (listMhs[j].ipk>listMhs[j-1].ipk){
-                    Mahasiswa21 tmp =listMhs[j];
+                    Mahasiswa21DLL tmp =listMhs[j];
                     listMhs[j] = listMhs[j-1];
                     listMhs[j-1] = tmp;
                 }
@@ -36,7 +36,7 @@ public class MahasiswaBerprestasi {
                     idxMin = j;
                 }
             }
-            Mahasiswa21 tmp = listMhs[idxMin];
+            Mahasiswa21DLL tmp = listMhs[idxMin];
             listMhs[idxMin] = listMhs[i];
             listMhs[i] = tmp;
         }
@@ -44,7 +44,7 @@ public class MahasiswaBerprestasi {
 
     void insertionSort(){
         for (int i=1; i<listMhs.length; i++){
-            Mahasiswa21 tmp = listMhs[i];
+            Mahasiswa21DLL tmp = listMhs[i];
             int j=i;
             while (j>0 && listMhs[j-1].ipk < tmp.ipk){
                 listMhs[j] = listMhs[j-1];
@@ -55,7 +55,7 @@ public class MahasiswaBerprestasi {
     }
 
     void tampil(){
-        for (Mahasiswa21 m:listMhs){
+        for (Mahasiswa21DLL m:listMhs){
             m.tampilInformasi();
             System.out.println("------------------------------");
         }
